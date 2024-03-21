@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>旅行プラン提案-結果</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/travel-plan-by-chatgpt/result.css">
+</head>
+<body>
+    <h2>旅行プラン提案アプリForSpringBoot</h2>
+    <blockquote>
+        <p>☆処理結果☆</p>
+        <p>以下が旅行プランの提案です。<br />
+        参考にしてみてください！！</p>
+    </blockquote>
+    <p class="sub-title"><strong>★リクエスト★</strong></p>
+    <div class="black_bord" th:utext="${request}"></div>
+	<p class="sub-title"><strong>★提案プラン★</strong></p>
+	<div class="black_bord" th:utext="${result}"></div>
+
+    <br />
+    <div class="back-button">
+        <button onclick="location.href='/travel-plan-by-chatgpt'">入力画面へ戻る</button>
+    </div>
+
+    <div class="back-button">
+        <button onclick="location.href='XXXXXXXXXXXXXXXXXXXXX'">ホームへ戻る</button>
+    </div>
+</body>
+</html>

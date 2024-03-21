@@ -1,0 +1,181 @@
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* オーバーレイの背景色と透明度 */
+  display: none; /* 初期状態では非表示 */
+  z-index: 9999; /* 最前面に表示 */
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+	background: #eaf5f9;
+	padding: 1rem 1rem 1rem 2.5rem;
+	position: relative;
+}
+
+h2:before {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    width: 6px;
+    height: 60%;
+    content: '';
+    border-radius: 3px;
+    background: #27acd9;
+}
+
+blockquote {
+    position: relative;
+    padding: 5px 15px 5px 55px;
+    box-sizing: border-box;
+    font-style: italic;
+    color: #464646;
+    background: #e8efff;
+}
+
+blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 38px;
+    height: 30px;
+    text-align: center;
+    content: "\f10d";
+    font-family: FontAwesome;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 30px;
+    background: #87a4e3;
+    font-weight: 900;
+}
+
+blockquote:after{
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 30px;
+    height: 0;
+    width: 0;
+    border-left: 19px solid #87a4e3;
+    border-right: 19px solid #87a4e3;
+    border-bottom: 10px solid transparent;
+}
+
+blockquote p {
+    position: relative;
+    padding: 0;
+    margin: 10px 0;
+    z-index: 3;
+    line-height: 1.7;
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+
+/* レイアウト */
+form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #f2f4f5;
+    justify-content: center;
+}
+
+.form-row:last-child {
+    border-bottom: none;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    justify-content: center;
+}
+
+.form-label label {
+    font-weight: bold;
+}
+
+.form-label span {
+    margin-left: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #166ab5;
+}
+
+/* フォームパーツのデザイン */
+input, textarea {
+    background-color: #f2f4f5;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #333;
+    flex-grow: 1;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+select {
+    background-color: #f2f4f5;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+button {
+    cursor: pointer;
+    margin-top: 30px;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #166ab5;
+}
+
+.back-button {
+    align-items: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.back-button:last-child {
+    border-bottom: none;
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight:bold;
+}
